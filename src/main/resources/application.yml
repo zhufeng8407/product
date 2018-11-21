@@ -1,0 +1,21 @@
+spring:
+  application:
+    name: product
+  sleuth:
+    sampler:
+      probability: 1
+  zipkin:
+    baseUrl: http://10.211.55.4:9411/
+    service:
+      name: product
+    locator:
+      discovery:
+        enabled: true
+    sender:
+      type: web
+server:
+  port: 8081
+eureka:
+  client:
+    service-url:
+      defaultZone: http://eureka7001:8671/eureka/
